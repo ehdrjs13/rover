@@ -1,0 +1,98 @@
+body{
+    background-color: #8c8c90;
+}
+.main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+}
+.head{
+    border-radius: 10px;
+    background-color: #1e1e1e; 
+}
+.title{
+    color: #ffffff;
+    font-size: 200%;
+    margin-top: -10%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 50%;
+    height: auto;
+}
+
+/* 이벤트 */
+.event{
+    display: none;
+    margin:auto;
+}
+.eventitem{
+    text-align: center;
+}
+/* 이미지들 묶는거 */
+.gallery{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    width: 100%; 
+    height: auto;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+
+}
+.gallerytitle{
+
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    color: white
+}
+.images{ 
+    margin : 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    
+}
+
+/* 개별 이미지 틀 */
+.image{ 
+    margin: 4px;
+    background-color: #414141;
+    border-radius: 8px;
+    width: 5em;
+    height: 4.5em;
+    overflow: hidden;
+}
+.personImage{
+    margin:auto;
+     width: 5em;
+    border-radius: 8px;
+
+}
+
+/* 라이브스트리밍으로 이동 */
+.goToStreaming{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    width: 4em;
+    height: 2em;
+    border-radius: 20px;
+}
+.live{
+    margin: auto;
+    margin-top: 7%;
+    text-align: center;
+    color: #ffffff;
+}
