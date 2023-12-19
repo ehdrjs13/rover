@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_live.css') }}">
+    <title>META-Rover Live Streaming Page</title>
+</head>
+
+<body>
+  <div class = 'banner'>
+    <img class = 'logo' src = "{{ url_for('static', filename='images/logo.png') }}">
+    <p class = 'title'>Live</p>
+  </div>
+  <div class = 'footage'>
+    <video class = 'video' src = 'http://127.0.0.1:8000/live' autoplay controls></video>
+    <!-- 링크 수정필요 -->
+    
+  </div>
