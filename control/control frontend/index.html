@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>META Rover Controller</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class = 'Controller'>
+        <div class = 'button' id = 'leftrotate'><p class = 'arrow'>⟲</p></div>
+        <div class = 'button' id = 'forward'><p class = 'arrow'>↑</p></div>
+        <div class = 'button' id = 'rightrotate'><p class = 'arrow'>⟳</p></div>
+        <div class = 'button' id = 'left'><p class = 'arrow'>←</p></div>
+        <div class = 'button' ></div>
+        <div class = 'button' id = 'right'><p class = 'arrow'>→</p></div>
+        <div class = 'button' ></div>
+        <div class = 'button' id = 'backward'><p class = 'arrow'>↓</p></div>
+        <div class = 'button' ></div>
+
+        <script>
+            function sendSignal(index){
+                fetch(`https://192.168.45.25:8000/${index}`)
+            }
+
+            let forward = document.getElementById('forward');
+
+            forward.addEventListener('touchstart', function() {
+            sendSignal('forward');
+            console.log('전진');
+            });
+
+            touchArea.addEventListener('touchend', function() {
+            sendSignal('stop');
+            console.log('정지');
+            });
+
+
+
+
+
+
+            let backward = document.getElementById('backward');
+
+
+            backward.addEventListener('touchstart', function() {
+            sendSignal('backward');
+            console.log('전진');
+            });
+
+            backward.addEventListener('touchend', function() {
+            sendSignal('stop');
+            console.log('정지');
+            });
+
+
+
+
+
+            let left = document.getElementById('left');
+
+            left.addEventListener('touchstart', function() {
+            sendSignal('left');
+            console.log('전진');
+            });
+
+            left.addEventListener('touchend', function() {
+            sendSignal('stop');
+            console.log('정지');
+            });
+
+
+
+
+            let right = document.getElementById('right');
+
+            right.addEventListener('touchstart', function() {
+            sendSignal('right');
+            console.log('전진');
+            });
+
+            right.addEventListener('touchend', function() {
+            sendSignal('stop');
+            console.log('정지');
+            });
+
+
+
+
+            let leftrotate = document.getElementById('leftrotate');
+
+ 
+            leftrotate.addEventListener('touchstart', function() {
+            sendSignal('leftRotate');
+            console.log('전진');
+            });
+
+            leftrotate.addEventListener('touchend', function() {
+            sendSignal('stop');
+            console.log('정지');
+            });
+
+
+
+
+            let rightrotate = document.getElementById('rightrotate');
+
+            rightrotate.addEventListener('touchstart', function() {
+            sendSignal('rightRotate');
+            console.log('전진');
+            });
+
+            rightrotate.addEventListener('touchend', function() {
+            sendSignal('stop')
+            console.log('정지');
+            });
+        </script>
+
+    </div>
+    
+</body>
+</html>
