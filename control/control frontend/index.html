@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>META Rover Controller</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"">
+    <!-- stylesheet 수정필요 -->
 </head>
 <body>
     <div class = 'Controller'>
@@ -17,6 +18,7 @@
         <div class = 'button' ></div>
         <div class = 'button' id = 'backward'><p class = 'arrow'>↓</p></div>
         <div class = 'button' ></div>
+        
 
         <script>
             function sendSignal(index){
@@ -28,11 +30,14 @@
             forward.addEventListener('touchstart', function() {
             sendSignal('forward');
             console.log('전진');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             touchArea.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
+            
             });
 
 
@@ -46,11 +51,13 @@
             backward.addEventListener('touchstart', function() {
             sendSignal('backward');
             console.log('후진');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             backward.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
             });
 
 
@@ -62,11 +69,13 @@
             left.addEventListener('touchstart', function() {
             sendSignal('left');
             console.log('좌회전');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             left.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
             });
 
 
@@ -77,11 +86,13 @@
             right.addEventListener('touchstart', function() {
             sendSignal('right');
             console.log('우회전');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             right.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
             });
 
 
@@ -93,11 +104,13 @@
             leftrotate.addEventListener('touchstart', function() {
             sendSignal('leftRotate');
             console.log('좌선회');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             leftrotate.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
             });
 
 
@@ -108,11 +121,13 @@
             rightrotate.addEventListener('touchstart', function() {
             sendSignal('rightRotate');
             console.log('우선회');
+            this.style.backgroundColor = '#e74c3c';
             });
 
             rightrotate.addEventListener('touchend', function() {
             sendSignal('stop')
             console.log('정지');
+            this.style.backgroundColor = '#e0e0e0';
             });
         </script>
 
