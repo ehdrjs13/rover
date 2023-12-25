@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from movement import Movement
 from flask import Flask
 
