@@ -1,6 +1,7 @@
 from movement import Movement
 from flask import Flask
 
+print('server init!')
 ctrl = Movement()
 app = Flask(__name__)
 
