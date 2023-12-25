@@ -11,16 +11,22 @@ app = Flask(__name__)
 def stop():
     ctrl.stop()
 
+    print('stop')
+
     return 's'
 
 @app.route('/forward/')
 def forward():
     ctrl.forward()
 
+    print('forward')
+
     return 'f'
 @app.route('/rightForward/')
 def rightForward():
     ctrl.rightForward()
+
+    print('rightforward')
 
     return 'rB'
 
@@ -28,10 +34,14 @@ def rightForward():
 def leftForward():
     ctrl.leftForward
 
+    print('leftForward')
+
     return 'lF'
 @app.route('/backward/')
 def backward():
     ctrl.backward
+
+    print('backward')
 
     return 'b'
 
@@ -39,11 +49,15 @@ def backward():
 def leftBackward():
     ctrl.leftBackward
 
+    print('leftbackward')
+
     return 'lB'
 
 @app.route('/rightBackward/')
 def rightBackward():
     ctrl.rightBackward()
+
+    print('rightBackward')
 
     return 'rB'
 
@@ -51,11 +65,15 @@ def rightBackward():
 def rightRotate():
     ctrl.rightRotate()
 
+    print('rightRotate')
+
     return 'rR'
 
 @app.route('/leftRotate/')
 def leftRotate():
     ctrl.leftRotate()
+
+    print('leftRotate')
 
     return 'lR'
 

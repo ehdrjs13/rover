@@ -41,7 +41,7 @@
             }
 
             function sendSignal(index){
-                fetch(`http://192.168.1.103:5000/${index}`)
+                fetch(`http://192.168.1.103:5000/${index}/`)
             }
 
             let forward = document.getElementById('forward');
@@ -86,7 +86,7 @@
             let left = document.getElementById('left');
 
             left.addEventListener('touchstart', function() {
-            sendSignal('left');
+            sendSignal('leftForward');
             console.log('좌회전');
             this.style.backgroundColor = '#e74c3c';
             });
@@ -103,7 +103,7 @@
             let right = document.getElementById('right');
 
             right.addEventListener('touchstart', function() {
-            sendSignal('right');
+            sendSignal('rightForward');
             console.log('우회전');
             this.style.backgroundColor = '#e74c3c';
             });
