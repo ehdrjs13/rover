@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"">
     <!-- stylesheet 수정필요 -->
 </head>
-<body>
+<body onseletstart = "return false">
     <div class = 'Controller'>
         <div class = 'button' id = 'leftrotate'><p class = 'arrow'>⟲</p></div>
         <div class = 'button' id = 'forward'><p class = 'arrow'>↑</p></div>
@@ -21,8 +21,27 @@
         
 
         <script>
+            var omitformtags = ["input", "textarea", "select"]
+            omitformtags = omitformtags.join("|")
+
+            function disableselect(e) {
+                if (omitformtags.indexOf(e.target.tagName.toLowerCase()) == -1)
+                    return false
+            }
+
+            function reEnable() {
+                return true
+            }
+
+            if (typeof document.onselectstart != "undefined")
+                document.onselectstart = new Function("return false")
+            else {
+                document.onmousedown = disableselect
+                document.onmouseup = reEnable
+            }
+
             function sendSignal(index){
-                fetch(`https://192.168.45.25:8000/${index}`)
+                fetch(`https://192.168.1.103:5000/${index}`)
             }
 
             let forward = document.getElementById('forward');
@@ -33,7 +52,7 @@
             this.style.backgroundColor = '#e74c3c';
             });
 
-            touchArea.addEventListener('touchend', function() {
+            forward.addEventListener('touchend', function() {
             sendSignal('stop');
             console.log('정지');
             this.style.backgroundColor = '#e0e0e0';

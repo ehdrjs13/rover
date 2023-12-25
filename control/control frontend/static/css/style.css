@@ -9,7 +9,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin:auto;
-    margin-top: 60%
+    margin-top: 180px
 
 
 }

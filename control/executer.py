@@ -9,53 +9,53 @@ app = Flask(__name__)
 def stop():
     ctrl.stop()
 
-    return None
+    return 's'
 
 @app.route('/forward/')
 def forward():
     ctrl.forward()
 
-    return None
+    return 'f'
 @app.route('/rightForward/')
 def rightForward():
     ctrl.rightForward()
 
-    return None
+    return 'rB'
 
 @app.route('/leftForward/')
 def leftForward():
     ctrl.leftForward
 
-    return None
+    return 'lF'
 @app.route('/backward/')
 def backward():
     ctrl.backward
 
-    return None
+    return 'b'
 
 @app.route('/leftBackward/')
 def leftBackward():
     ctrl.leftBackward
 
-    return None
+    return 'lB'
 
 @app.route('/rightBackward/')
 def rightBackward():
     ctrl.rightBackward()
 
-    return None
+    return 'rB'
 
 @app.route('/rightRotate/')
 def rightRotate():
     ctrl.rightRotate()
 
-    return None
+    return 'rR'
 
 @app.route('/leftRotate/')
 def leftRotate():
     ctrl.leftRotate()
 
-    return None
+    return 'lR'
 
 
 
