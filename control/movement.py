@@ -2,7 +2,7 @@ from gpiozero import Motor
 
 class Movement():
     def __init__(self) -> None:
-        self.Rmotor = Motor(5,6) # 핀 넘버 추가하기
+        self.Rmotor = Motor(6,5) # 핀 넘버 추가하기
         self.Lmotor = Motor(23,24) #얘도 핀 넘버 추가하기
         return
     
